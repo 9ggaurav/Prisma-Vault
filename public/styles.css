@@ -8,11 +8,49 @@ nav{
     width: 300px;
     height: 100vh;
     padding-left: 40px;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 .navbar-brand{
     font-size: 1.8rem;
+}
+
+.navbar-nav{
+    padding-left: 20px;
+}
+
+.nav-logo{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+#header-description {
+    display: flex;
+}
+#header-description strong {
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+.header-logo{
+    width: 30px;
+    height: 30px;
+    margin-right: 0px;
+}
+
+.home-header > input {
+    width: 700px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.home-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav > div {
@@ -36,7 +74,7 @@ nav > div {
 }
 
 .container{
-    margin-top: 40px;
+    margin-top: 12px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
