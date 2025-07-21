@@ -11,13 +11,16 @@
     <title>Document</title>
   </head>
   <body>
-    <%- include('header') %>
+    <% if (user) { %>
+        <%- include('inHeader') %>
+    <% } else { %>  
+        <%- include('header') %>
+    <% } %>
     <div class="container">
       <div class="form-block">
         <h1>signup</h1>
         <form method="POST" action="/auth/signup">
-
-            <div class="form-group">
+          <div class="form-group">
             <label for="username">Username </label>
             <input
               type="text"
@@ -26,7 +29,6 @@
               aria-describedby="username"
               name="username"
             />
-    
           </div>
 
           <div class="form-group">
@@ -63,6 +65,13 @@
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         <a href="/auth/login">Already have an account? login in here</a>
+        <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+        <ul>
+          <% errors.forEach(error => { %>
+          <li class="validation-error"><%= error.msg %></li>
+          <% }) %>
+        </ul>
+        <% } %>
       </div>
 
       <%- include('footer') %>

@@ -47,6 +47,11 @@ nav > div {
     padding: 20px;
 }
 
+.validation-error {
+    color: red;
+    text-decoration: underline;
+}
+
 footer{
     padding: 20px;
 }
